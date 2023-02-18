@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="author" content="pacifist">
+		<meta name="description" content="Сайт для подсчёта количества внеземных цивилизаций в пределах нашей галактики. Содержит описание новой, созданной в рамках проекта, и старой формул Дрейка.">
+		<title>Drake's equation</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+
+	<body>
+
+		<main>
+			<nav align="center">
+				<ul class="nav">
+					<li><a href="#about-equation">О формуле</a></li>
+					<li><a href="#changes">Изменения</a></li>
+					<li><a href="#calculators">Калькуляторы</a></li>
+					<li><a href="#conclusion">Вывод</a></li>
+				</ul>
+			</nav>
+
+			<content>
+				<center>
+					<h1>Усовершенствование формулы Дрейка</h1>
+					<p>Для оценки количества внеземных цивилизаций</p>
+					<hr>
+
+					<h2 id="about-equation">О формуле</h2>
+				</center>
+
+				<p class="info">
+					<b>Уравнение Дрейка</b> – это спекулятивная формула, целью которой является приблизительная оценка количества возможных внеземных цивилизаций. Основной причиной её создания стало желание начать дискуссию на тему разумной жизни во вселенной и разбить задачу по поиску таковой на удобные подпункты. Данная формула не призвана что-либо считать, она лишь помогает посмотреть на проблему под другим углом и свести её к исследованию отдельных множителей.
+				</p>
+				<p class="info">
+					Уравнение было сформулировано доктором <b>Фрэнком Дональдом Дрейком</b> в 1960 году, американским астрономом из Калифорнийского университета в Санта-Крузе.
+				</p>
+				<p class="info">
+					Ниже представлено само уравнение:
+				</p>
+
+				<center>
+
+					<p id="original-equation" class="equation">
+						<span class="multiplier" title="количество цивилизаций">ℵ</span>=
+						<span class="multiplier" title="темп формирования звёзд">R</span>
+						∙<span class="multiplier" title="доля звёзд с планетами">f<sub style="animation-delay: 0.2s">p</sub></span>
+						∙<span class="multiplier" title="количество миров, пригодных для жизни">n<sub style="animation-delay: 0.4s">e</sub></span>
+						∙<span class="multiplier" title='планеты с жизнью'>f<sub style="animation-delay: 0.6s">l</sub></span>
+						∙<span class="multiplier" title="вероятность разума">f<sub style="animation-delay: 0.8s">i</sub></span>
+						∙<span class="multiplier" title="доля цивилизаций со связью">f<sub style="animation-delay: 1s">c</sub></span>
+						∙<span class="multiplier" title="время подачи сигнала">L</span>
+					</p>
+
+				</center>
+
+				<p id="original-description" class="info description"></p>
+				<center>
+					<h2 id="changes">Новая формула</h2>
+				</center>
+
+				<p class="info">На основании формулы выше было создано уравнение, которое лучше подходит под современные научные данные. Красным цветом выделены элементы, которые были изменены или дополнены.</p>
+
+				<center>
+					
+					<p id="changed-equation" class="equation">
+						<span class="multiplier" title="количество цивилизаций">ℵ</span>=
+						<span class="multiplier" title="количество звёздных систем" style="color: rgb(156, 14, 42);">Q</span>
+						∙<span class="multiplier" title="доля звёзд определённого типа" style="color: rgb(156, 14, 42);">f<sub style="animation-delay: 0.14s">s</sub></span>
+						∙(<span class="multiplier" title="количество планет, пригодных для жизни">n<sub style="animation-delay: 0.28s; color: rgb(156, 14, 42);">p</sub></span> + <span class="multiplier" title="количество спутников, пригодных для жизни">n<sub style="animation-delay: 0.42s; color: rgb(156, 14, 42);">m</sub></span>)
+						∙<span class="multiplier" title='планеты с жизнью'>f<sub style="animation-delay: 0.56s">l</sub></span>
+						∙<span class="multiplier" title="вероятность разума">f<sub style="animation-delay: 0.7s">i</sub></span>
+						∙<span class="multiplier" title="доля цивилизаций с радиосвязью">f<sub style="animation-delay: 0.84s"><span style="color: rgb(156, 14, 42);">r</span>c</sub></span>
+						∙<span class="multiplier" title="доля цивилизаций, посылающих сигналы в космос" style="color: rgb(156, 14, 42);">f<sub style="animation-delay: 1s;">t</sub></span>
+					</p>
+
+				</center>
+
+				<p id="changed-description" class="info description"></p>
+
+				<center>
+					<h2 id="calculators">Калькуляторы</h2>
+					<h3>Оригинальная формула</h3>
+				</center>
+
+				<center>
+					<p class="calculator" id="original-calculator">
+						<input type="number" min="0" required placeholder="R" class="orig-variable">
+						∙<input type="number" min="0" required placeholder="fp" class="orig-variable">
+						∙<input type="number" min="0" required placeholder="ne" class="orig-variable">
+						∙<input type="number" min="0" required placeholder="fl" class="orig-variable">
+						∙<input type="number" min="0" required placeholder="fi" class="orig-variable">
+						∙<input type="number" min="0" required placeholder="fc" class="orig-variable">
+						∙<input type="number" min="0" required placeholder="L" class="orig-variable">
+						= <span id="orig-result">ℵ</span>
+					</p>
+
+					<br>
+					<div class="button-field">
+						<button id="orig-submit-button" type="submit">Подсчитать</button>
+						<button id="orig-clear-button">Очистить</button>
+						<button id="fill-with-actual-values" class="fill-button">Заполнить актуальными значениями</button>
+					</div>
+				</center>
+
+				<center>
+					<h3>Изменённая формула</h3>
+				</center>
+
+				<center>
+					<p class="calculator" id="changed-calculator">
+						<input type="number" min="0" required placeholder="Q" class="changed-variable">
+						∙<input type="number" min="0" required placeholder="fs" class="changed-variable">
+						∙(<input type="number" min="0" required placeholder="np" class="changed-variable"> 
+						+ <input type="number" min="0" required placeholder="nm" class="changed-variable">)
+						∙<input type="number" min="0" required placeholder="fl" class="changed-variable">
+						∙<input type="number" min="0" required placeholder="fi" class="changed-variable">
+						∙<input type="number" min="0" required placeholder="fr" class="changed-variable">
+						∙<input type="number" min="0" required placeholder="ft" class="changed-variable">
+						= <span id="changed-result">ℵ</span>
+					</p>
+
+					<br>
+					<div class="button-field">
+						<button id="changed-submit-button" type="submit">Подсчитать</button>
+						<button id="changed-clear-button">Очистить</button>
+						<button id="fill-with-new-actual-values" class="fill-button">Заполнить актуальными значениями</button>
+					</div>
+				</center>
+
+				<center>
+					<h2 id="conclusion">Вывод</h2>
+				</center>
+
+				<p class="info">Если проанализировать результаты получаемые по обоим формулам, можно придти к интересным выводам. Количество разумных цивилизаций в нашей галактике по первому уравнению выходит в среднем около <b>23 904 000</b>, а по второму около <b>1 245 000 000</b>(в 52 раза больше!). Если исключить вероятность ошибки, то выходит, что в относительной близости от человечества находится огромное количество таких же разумных существ, которые, однако, слишком далеко от нас, чтобы мы могли заметить их существование(однако не исключено, что они давно заметили наше). Разумеется, это значение является верхней границей и случится только при самых благоприятных условиях. Если немного подкорректировать значения: убрать шанс возникновения жизни на спутниках или снизить его в четыре раза, сместить количество звёзд в галактике к нижней границе - выходит что-то около 560 250 000 цивилизаций, что выглядит намного более убедительно.</p>
+			</content>
+
+		</main>
+
+	</body>
+
+
+	<script src="script.js" rel="javascript"></script>
+</html>
